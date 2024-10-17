@@ -14,7 +14,14 @@ public class GPSDataConverter {
 		int hr, min, sec;
 		
 		// TODO
-		throw new UnsupportedOperationException(TODO.method());
+	   hr = 8;
+	   min = 52;
+	   sec = 26;
+		
+
+		secs = hr*60*60 + min*60 + sec;
+
+		return secs;
 		
 	}
 

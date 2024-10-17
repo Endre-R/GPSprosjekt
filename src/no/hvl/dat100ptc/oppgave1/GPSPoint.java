@@ -1,76 +1,53 @@
 package no.hvl.dat100ptc.oppgave1;
 
-import no.hvl.dat100ptc.TODO;
-
 public class GPSPoint {
+    	private int time;         // Tid i sekunder siden midnatt
+    	private double latitude;  // Breddegrad i grader
+    	private double longitude; // Lengdegrad i grader
+    	private double elevation; // Høyde i meter
 
-	// TODO - objektvariable
+    public GPSPoint(int time, double latitude, double longitude, double elevation) {
+
+        this.time = time;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.elevation = elevation;
+    }
+
 	
-	public GPSPoint(int time, double latitude, double longitude, double elevation) {
-
-		// TODO - konstruktur
-
-		throw new UnsupportedOperationException(TODO.construtor("GPSPoint"));
-		
-	}
-
-	// TODO - get/set metoder
 	public int getTime() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return time;
 	}
 
-	public void setTime(int time) {
-				
-		throw new UnsupportedOperationException(TODO.method());
-		
+	public void setTime(int time) {	
+		this.time = time;
 	}
 
 	public double getLatitude() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		
+		return latitude;
 	}
 
 	public void setLatitude(double latitude) {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.latitude = latitude;
 	}
 
 	public double getLongitude() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return longitude;
 	}
 
 	public void setLongitude(double longitude) {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.longitude = longitude;
 	}
 
 	public double getElevation() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return elevation;
 	}
 
 	public void setElevation(double elevation) {
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.elevation = elevation;
 	}
 	
 	public String toString() {
-		
-		String str;
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO
-		
+		return time + " (" + latitude + "," + longitude + ") " + elevation + "\n";
 	}
 }
