@@ -10,22 +10,30 @@ public class GPSData {
 
 	public GPSData(int antall) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		gpspoints = new GPSPoint[antall]; // Liste av GPS-punkter
+			
 		
-		// TODO
+		
 	}
 
 	public GPSPoint[] getGPSPoints() {
+		
 		return this.gpspoints;
 	}
 	
 	protected boolean insertGPS(GPSPoint gpspoint) {
 
-		boolean inserted = false;
+		if (antall < gpspoints.length) {
+			gpspoints[antall] = gpspoint;
+			antall++;
+			return true;
+			
+		}
+		 
+		return false;
+		 
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO 
+		 
 	
 	}
 
