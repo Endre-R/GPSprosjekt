@@ -22,14 +22,14 @@ public class GPSDataConverterTester {
 	@Test
 	public void test_toSeconds() {
 		
-	    assertEquals(8*60*60 + 52*60 + 26,GPSDataConverter.toSeconds(TIMESTR));
+	assertEquals(8*60*60 + 52*60 + 26,GPSDataConverter.toSeconds(TIMESTR));
 		
 	}
 
 	@Test
 	public void test_convert () {
 		
-		GPSPoint g = GPSDataConverter.convert(TIMESTR,LATSTR,LONGSTR,ELEVSTR);
+		GPSDataConverter.GPSPoint g = GPSDataConverter.convert(TIMESTR,LATSTR,LONGSTR,ELEVSTR);
 		
 		assertEquals(8*60*60 + 52*60 + 26,g.getTime());
 		assertEquals(60.385390,g.getLatitude(),0.01);
