@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "no.hvl.dat100ptc.oppgave2.Main",
+            "projectName": "dat100-prosjekt-gps-startcode"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"
