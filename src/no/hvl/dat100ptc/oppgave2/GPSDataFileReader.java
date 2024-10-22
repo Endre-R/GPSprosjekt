@@ -59,7 +59,7 @@ public class GPSDataFileReader {
 			}
 
 		} catch (FileNotFoundException e) {
-		    JOptionPane.showMessageDialog(null,"GPS filen " + filename + "finnes ikke");
+			JOptionPane.showMessageDialog(null,"GPS filen " + filename + "finnes ikke");
 			e.printStackTrace();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null,"GPS filen " + filename + "kunne ikke leses");

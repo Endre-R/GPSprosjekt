@@ -6,17 +6,17 @@ import no.hvl.dat100ptc.oppgave2.GPSDataConverter;
 import no.hvl.dat100ptc.oppgave2.GPSDataFileReader;
 import no.hvl.dat100ptc.oppgave3.GPSUtils;
 
+
 import no.hvl.dat100ptc.TODO;
 
 public class GPSComputer {
-	
+	//Objektvariabelen gpspoints som er en tabell med referanser til GPS punkter
 	private GPSPoint[] gpspoints;
-	
-	public GPSComputer(String filename) {
 
+	//Konstruktør i klassen:
+	public GPSComputer(String filename) {
 		GPSData gpsdata = GPSDataFileReader.readGPSFile(filename);
 		gpspoints = gpsdata.getGPSPoints();
-
 	}
 
 	public GPSComputer(GPSPoint[] gpspoints) {
@@ -28,31 +28,49 @@ public class GPSComputer {
 	}
 	
 	public double totalDistance() {
-
-		double distance = 0;
-
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO
-
+		double totalDistance = 0.0;
+	
+		for (int i = 0; i < gpspoints.length - 1; i++) {
+			totalDistance += GPSUtils.distance(gpspoints[i], gpspoints[i + 1]);
+		}
+	
+		return totalDistance;
 	}
+	
 
 	public double totalElevation() {
 
 		double elevation = 0;
 
-		throw new UnsupportedOperationException(TODO.method());
+		/*for(int i = 0; i < elevation.length; i++){
+			elevation += GPSPoint.getElevation();
+
+		}*/
+
 		
-		// TODO 
+		return elevation; 
+		
+		
 		
 	}
 
 	public int totalTime() {
 
-		// TODO
-		throw new UnsupportedOperationException(TODO.method());
 		
-	}
+		// Tid brukt totalt, fra gpsdata
+		if (gpspoints.length == 0) {
+			if (gpspoints.length == 1) {
+				return 0;
+			
+		}
+			
+		}
+		return gpspoints[gpspoints.length - 1].getTime() - gpspoints[0].getTime();
+
+		}
+
+		
+
 		
 
 	public double[] speeds() {
@@ -95,7 +113,6 @@ public class GPSComputer {
 
 		// TODO 
 		throw new UnsupportedOperationException(TODO.method());
-		
 	}
 
 	public double totalKcal(double weight) {
@@ -104,7 +121,6 @@ public class GPSComputer {
 
 		// TODO 
 		throw new UnsupportedOperationException(TODO.method());
-		
 	}
 	
 	private static double WEIGHT = 80.0;
@@ -113,7 +129,18 @@ public class GPSComputer {
 
 		// TODO 
 		throw new UnsupportedOperationException(TODO.method());
-		
 	}
 
+public static void main(String[] args) {
+    GPSPoint[] points = new GPSPoint[] {
+        new GPSPoint(0, 60.385390, 5.332200, 50.0),
+        new GPSPoint(10, 60.389390, 5.334200, 55.0),
+        new GPSPoint(20, 60.392390, 5.338200, 60.0)
+    };
+
+    GPSComputer gpsComputer = new GPSComputer(points);
+    double distance = gpsComputer.totalDistance();
+    
+    System.out.println("Total distance: " + distance + " meters");
+}
 }

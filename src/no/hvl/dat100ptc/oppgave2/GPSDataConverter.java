@@ -4,7 +4,6 @@ import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 
 public class GPSDataConverter {
-
 	public static int toSeconds(String timestr) {
 		int secs;
 		int hr, min, sec;

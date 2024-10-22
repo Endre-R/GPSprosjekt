@@ -46,7 +46,7 @@ public class GPSComputerTester {
 	
 	@Test
 	public void testTotalElevation() {
-		assertEquals(EXP_TOTALELEVATION,gpscomp.totalElevation(), 0);
+		assertEquals(EXP_TOTALELEVATION,gpscomp.totalElevation(),0);
 	}
 
 	@Test

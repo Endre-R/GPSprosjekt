@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GPSComputer",
+            "request": "launch",
+            "mainClass": "no.hvl.dat100ptc.oppgave4.GPSComputer",
+            "projectName": "dat100-prosjekt-gps-startcode"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "no.hvl.dat100ptc.oppgave2.Main",
