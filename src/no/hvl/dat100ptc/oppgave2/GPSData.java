@@ -57,7 +57,7 @@ public class GPSData {
 
 	public void print() {
 
-		System.out.println("====== GPS Data - START ======");
+		System.out.println("====== GPS Data - START ====== \n");
     
 		
 		for (int i = 0; i < antall; i++) {
